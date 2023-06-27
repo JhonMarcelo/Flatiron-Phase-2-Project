@@ -27,7 +27,20 @@ function ColorSchemesExample() {
         </Container>
       </Navbar>
       <div>
-        <Switch></Switch>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/recipe">
+            <Recipe />
+          </Route>
+          <Route path="/guide">
+            <Guide />
+          </Route>
+          <Route path="/about">
+            <About />
+          </Route>
+        </Switch>
       </div>
       <br />
       {/* <Navbar bg="primary" data-bs-theme="dark">
