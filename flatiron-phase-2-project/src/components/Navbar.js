@@ -2,7 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
+import { Switch, Route, NavLink } from "react-router-dom";
 
 function ColorSchemesExample() {
   return (
@@ -26,6 +26,9 @@ function ColorSchemesExample() {
           </Nav>
         </Container>
       </Navbar>
+      <div>
+        <Switch></Switch>
+      </div>
       <br />
       {/* <Navbar bg="primary" data-bs-theme="dark">
         <Container>
@@ -37,8 +40,6 @@ function ColorSchemesExample() {
           </Nav>
         </Container>
       </Navbar> */}
-
-      <br />
     </>
   );
 }
