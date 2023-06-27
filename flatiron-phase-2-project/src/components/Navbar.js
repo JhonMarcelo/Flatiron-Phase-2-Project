@@ -3,13 +3,17 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Switch, Route, NavLink } from "react-router-dom";
+import Home from "./Home";
+import Recipe from "./Recipe";
+import Guide from "./Guide";
+import About from "./About";
 
 function ColorSchemesExample() {
   return (
     <>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand href="home">KMOK</Navbar.Brand>
+          <Navbar.Brand href="/">KMOK</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to={"/home"}>
               Home
@@ -29,6 +33,9 @@ function ColorSchemesExample() {
       <div>
         <Switch>
           <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/home">
             <Home />
           </Route>
           <Route path="/recipe">
