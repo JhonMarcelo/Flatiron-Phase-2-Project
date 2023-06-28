@@ -13,14 +13,18 @@ export default function ModalForm() {
   const [category, setCategory] = useState("Breakfast");
   const [image, setImage] = useState("");
 
-  const [ingredients, setIngredients] = useState([{ ingredient: "" }]);
+  const [ingredients, setIngredients] = useState([]);
 
   function handleSubmit(e) {
     e.preventDefault();
+    const newIngredient = ingredients.map((ingredient) => {
+      return ingredient.Ingredient;
+    });
     const newRecipe = {
       name: name,
       category: category,
       image: image,
+      ingredients: newIngredient,
     };
     console.log(newRecipe);
   }
@@ -28,8 +32,17 @@ export default function ModalForm() {
   function handleAddIngredients() {
     setIngredients([...ingredients, { ingredient: "" }]);
   }
-  function handleRemoveIngredients() {}
-  function handleChange() {}
+  function handleRemoveIngredients(i) {
+    const deleteIngredient = [...ingredients];
+    deleteIngredient.splice(i, 1);
+    setIngredients(deleteIngredient);
+  }
+  function handleChange(e, i) {
+    const { name, value } = e.target;
+    const onChangeVal = [...ingredients];
+    onChangeVal[i][name] = value;
+    setIngredients(onChangeVal);
+  }
 
   return (
     <>
@@ -85,10 +98,13 @@ export default function ModalForm() {
                     <Form.Control
                       type="text"
                       placeholder="Enter Ingredient"
-                      value={ingredient}
+                      name="Ingredient"
+                      value={ingredient.ingredients}
                       onChange={(e) => handleChange(e, i)}
                     />
-                    <Button onClick={handleRemoveIngredients}>Remove</Button>
+                    <Button onClick={() => handleRemoveIngredients(i)}>
+                      Remove
+                    </Button>
                   </>
                 );
               })}
