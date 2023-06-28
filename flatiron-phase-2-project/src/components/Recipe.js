@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Form from "./Form";
-import Image from "react-bootstrap/Image";
+import ModalForm from "./ModalForm";
 import Card from "react-bootstrap/Card";
 
 function Recipe() {
@@ -13,7 +12,7 @@ function Recipe() {
   }, []);
   return (
     <div>
-      <Form />
+      <ModalForm />
       {recipe.map((food) => {
         return (
           <>
