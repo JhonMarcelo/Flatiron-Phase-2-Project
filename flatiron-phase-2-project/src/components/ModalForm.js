@@ -33,7 +33,8 @@ export default function ModalForm() {
       ingredients: newIngredient,
       directions: newDirection,
     };
-    console.log(newRecipe);
+    console.log(newIngredient);
+    console.log(newDirection);
   }
 
   function handleAddIngredients() {
