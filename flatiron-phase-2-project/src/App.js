@@ -10,5 +10,5 @@ function App() {
     </div>
   );
 }
-
+//https://drive.google.com/uc?export=view&id= {paste here between d/ and /view}
 export default App;
