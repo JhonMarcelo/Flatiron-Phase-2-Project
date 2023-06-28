@@ -14,17 +14,24 @@ export default function ModalForm() {
   const [image, setImage] = useState("");
 
   const [ingredients, setIngredients] = useState([]);
+  const [directions, setDirections] = useState([]);
 
   function handleSubmit(e) {
     e.preventDefault();
     const newIngredient = ingredients.map((ingredient) => {
       return ingredient.Ingredient;
     });
+
+    const newDirection = directions.map((direction) => {
+      return direction.Direction;
+    });
+
     const newRecipe = {
       name: name,
       category: category,
       image: image,
       ingredients: newIngredient,
+      directions: newDirection,
     };
     console.log(newRecipe);
   }
@@ -37,13 +44,28 @@ export default function ModalForm() {
     deleteIngredient.splice(i, 1);
     setIngredients(deleteIngredient);
   }
-  function handleChange(e, i) {
+  function handleIngredientChange(e, i) {
     const { name, value } = e.target;
     const onChangeVal = [...ingredients];
     onChangeVal[i][name] = value;
     setIngredients(onChangeVal);
   }
 
+  function handleAddDirections() {
+    setDirections([...directions, { direction: "" }]);
+  }
+
+  function handleRemoveDirections(i) {
+    const deleteDirection = [...directions];
+    deleteDirection.splice(i, 1);
+    setDirections(deleteDirection);
+  }
+  function handleDirectionsChange(e, i) {
+    const { name, value } = e.target;
+    const onChangeVal = [...directions];
+    onChangeVal[i][name] = value;
+    setDirections(onChangeVal);
+  }
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
@@ -90,6 +112,7 @@ export default function ModalForm() {
                 onChange={(e) => setImage(e.target.value)}
               />
               <br></br>
+              {/* INGREDIENTS */}
               <Form.Label>Ingredients </Form.Label>
               <Button onClick={handleAddIngredients}>Add</Button>
               {ingredients.map((ingredient, i) => {
@@ -100,9 +123,29 @@ export default function ModalForm() {
                       placeholder="Enter Ingredient"
                       name="Ingredient"
                       value={ingredient.ingredients}
-                      onChange={(e) => handleChange(e, i)}
+                      onChange={(e) => handleIngredientChange(e, i)}
                     />
                     <Button onClick={() => handleRemoveIngredients(i)}>
+                      Remove
+                    </Button>
+                  </>
+                );
+              })}
+              <br></br>
+              {/* DIRECTIONS */}
+              <Form.Label>Directions </Form.Label>
+              <Button onClick={handleAddDirections}>Add</Button>
+              {directions.map((direction, i) => {
+                return (
+                  <>
+                    <Form.Control
+                      type="text"
+                      placeholder="Enter Steps"
+                      name="Direction"
+                      value={direction.directions}
+                      onChange={(e) => handleDirectionsChange(e, i)}
+                    />
+                    <Button onClick={() => handleRemoveDirections(i)}>
                       Remove
                     </Button>
                   </>
