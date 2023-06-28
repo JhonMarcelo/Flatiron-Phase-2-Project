@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
-  const [recipe, setRecipe] = useState([]);
-
-  useEffect(() => {
-    fetch("https://kmok-server.onrender.com/recipes")
-      .then((r) => r.json())
-      .then((items) => console.log(items));
-  }, []);
-  return <div>Home</div>;
+  return (
+    <>
+      <div>Home</div>
+      <Link to={"/recipe"}>Recipe</Link>
+    </>
+  );
 }
 
 export default Home;
