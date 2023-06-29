@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import banner from "../images/KMOK.png";
+import banner from "../images/KMOK2.png";
 import creamy from "../images/creamy-garlic.jpg";
 import pizza from "../images/pizza.jpg";
 import Button from "react-bootstrap/Button";
