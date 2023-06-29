@@ -11,7 +11,9 @@ function Recipe() {
       .then((items) => setRecipe(items));
   }, []);
 
-  function handleSubmitForm(newRecipe) {}
+  function handleSubmitForm(newRecipe) {
+    setRecipe([...recipe, newRecipe]);
+  }
 
   return (
     <div>

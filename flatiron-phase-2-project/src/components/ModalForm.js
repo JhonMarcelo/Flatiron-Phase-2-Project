@@ -166,7 +166,7 @@ export default function ModalForm({ onSubmitForm }) {
               <Button variant="secondary" onClick={handleClose}>
                 Close
               </Button>
-              <Button variant="primary" type="submit">
+              <Button variant="primary" type="submit" onClick={handleClose}>
                 Submit
               </Button>
             </Modal.Footer>
