@@ -33,7 +33,16 @@ export default function ModalForm() {
       ingredients: newIngredient,
       directions: newDirection,
     };
-    console.log(newRecipe);
+    fetch("https://kmok-server.onrender.com/recipes", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newRecipe),
+    })
+      .then((r) => r.json())
+      .then((newItem) => window.alert("Complete!"));
+    //WE CAN POST HERE
   }
 
   function handleAddIngredients() {

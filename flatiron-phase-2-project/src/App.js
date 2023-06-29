@@ -9,5 +9,6 @@ function App() {
     </div>
   );
 }
-//https://drive.google.com/uc?export=view&id= {paste here between d/ and /view}
+//https://drive.google.com/uc?export=view&id=1f8JZqwpwjgYfe5cKJtJZ4TXEHaDVStrN/ {paste here between d/ and /view}
+
 export default App;
