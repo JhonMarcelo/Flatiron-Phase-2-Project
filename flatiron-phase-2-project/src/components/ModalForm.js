@@ -33,8 +33,7 @@ export default function ModalForm() {
       ingredients: newIngredient,
       directions: newDirection,
     };
-    console.log(newIngredient);
-    console.log(newDirection);
+    console.log(newRecipe);
   }
 
   function handleAddIngredients() {
@@ -100,9 +99,9 @@ export default function ModalForm() {
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
               >
-                <option value="1">Breakfast</option>
-                <option value="2">Lunch</option>
-                <option value="3">Dinner</option>
+                <option value="Breakfast">Breakfast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
               </Form.Select>
               <Form.Label>Image</Form.Label>
               <Form.Control
@@ -132,6 +131,7 @@ export default function ModalForm() {
                   </>
                 );
               })}
+              <br></br>
               <br></br>
               {/* DIRECTIONS */}
               <Form.Label>Directions </Form.Label>
