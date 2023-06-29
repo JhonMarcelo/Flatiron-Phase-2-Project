@@ -10,9 +10,12 @@ function Recipe() {
       .then((r) => r.json())
       .then((items) => setRecipe(items));
   }, []);
+
+  function handleSubmitForm(newRecipe) {}
+
   return (
     <div>
-      <ModalForm />
+      <ModalForm onSubmitForm={handleSubmitForm} />
       {recipe.map((food) => {
         return (
           <>

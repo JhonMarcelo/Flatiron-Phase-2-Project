@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 
-export default function ModalForm() {
+export default function ModalForm({ onSubmitForm }) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -41,7 +41,7 @@ export default function ModalForm() {
       body: JSON.stringify(newRecipe),
     })
       .then((r) => r.json())
-      .then((newItem) => window.alert("Complete!"));
+      .then((newItem) => onSubmitForm(newItem));
     //WE CAN POST HERE
   }
 
