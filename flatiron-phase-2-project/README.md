@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+# Flatiron-Phase-2-Project
+
+## FLatiron Phase 2 Project Backend Server
+https://github.com/JhonMarcelo/Flatiron-Project-2-json-server
+=======
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -71,3 +77,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+>>>>>>> f6ede35 (Post works)
