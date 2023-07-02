@@ -16,11 +16,11 @@ function Recipe() {
   function handleSubmitForm(newRecipe) {
     setRecipe([...recipe, newRecipe]);
   }
-
+  console.log(recipe);
   function handleDeleteRecipe(id) {
     const newRecipeList = recipe.filter((recipe) => recipe.id !== id);
     setRecipe(newRecipeList);
-
+    console.log(recipe);
     console.log(id);
     // fetch(`http://localhost:3003/recipes/${id}`, {
     //   method: "DELETE",
