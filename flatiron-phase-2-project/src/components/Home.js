@@ -7,7 +7,10 @@ import Card from "react-bootstrap/Card";
 function Home() {
   return (
     <>
-      <img class="banner" src={banner} alt="banner" />
+      <Card className="bg-dark text-white">
+        <Card.Img src={banner} alt="Card image" />
+        <Card.ImgOverlay></Card.ImgOverlay>
+      </Card>
       Check out
       <Link to={"/recipe"}> Recipes </Link>
       to get started!
