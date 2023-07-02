@@ -2,9 +2,7 @@ import { Link } from "react-router-dom";
 import banner from "../images/KMOK2.png";
 import creamy from "../images/creamy-garlic.jpg";
 import pizza from "../images/pizza.jpg";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import Placeholder from "react-bootstrap/Placeholder";
 
 function Home() {
   return (
