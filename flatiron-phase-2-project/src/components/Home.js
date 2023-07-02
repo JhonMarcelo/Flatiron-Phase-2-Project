@@ -3,6 +3,7 @@ import banner from "../images/KMOK2.png";
 import creamy from "../images/creamy-garlic.jpg";
 import pizza from "../images/pizza.jpg";
 import Card from "react-bootstrap/Card";
+import Recipe from "./Recipe";
 
 function Home() {
   return (
