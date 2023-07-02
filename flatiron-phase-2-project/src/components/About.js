@@ -9,7 +9,7 @@ function About() {
         <Card.Img src={about} alt="Card image" />
         <Card.ImgOverlay></Card.ImgOverlay>
       </Card>
-      <h1>Our obss Health</h1>
+      <h1>Our obsession Health</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim
         sem, bibendum sit amet efficitur sed, pellentesque id risus. Ut eget
