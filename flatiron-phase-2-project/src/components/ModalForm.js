@@ -33,7 +33,7 @@ export default function ModalForm({ onSubmitForm }) {
       ingredients: newIngredient,
       directions: newDirection,
     };
-    fetch("https://kmok-server.onrender.com/recipes", {
+    fetch("http://localhost:3003/recipes", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

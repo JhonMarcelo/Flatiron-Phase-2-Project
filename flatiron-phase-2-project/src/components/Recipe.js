@@ -7,7 +7,7 @@ function Recipe() {
   const [recipe, setRecipe] = useState([]);
 
   useEffect(() => {
-    fetch("https://kmok-server.onrender.com/recipes")
+    fetch("http://localhost:3003/recipes")
       .then((r) => r.json())
       .then((items) => setRecipe(items));
   }, []);
