@@ -21,16 +21,13 @@ function Recipe() {
     const newRecipeList = recipe.filter((recipe) => recipe.id !== id);
     setRecipe(newRecipeList);
     console.log(recipe);
-    console.log(id);
-    // fetch(`http://localhost:3003/recipes/${id}`, {
-    //   method: "DELETE",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(newRecipe),
-    // })
-    //   .then((r) => r.json())
-    //   .then((newItem) => onSubmitForm(newItem));
+
+    fetch(`http://localhost:3003/recipes/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
   }
 
   return (
