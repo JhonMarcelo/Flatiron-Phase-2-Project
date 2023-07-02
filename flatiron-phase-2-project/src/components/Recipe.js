@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ModalForm from "./ModalForm";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/esm/Button";
 
 function Recipe() {
   const [recipe, setRecipe] = useState([]);
@@ -18,11 +17,10 @@ function Recipe() {
 
   return (
     <div>
-      <ModalForm onSubmitForm={handleSubmitForm} />
       {recipe.map((food) => {
         return (
           <>
-            <Card>
+            <Card key={food.id}>
               <Card.Img variant="top" src={food.image} alt="food_image" />
               <Card.Body>
                 <Card.Text>
@@ -38,7 +36,7 @@ function Recipe() {
                     return <ul>{directions}</ul>;
                   })}
                 </Card.Text>
-                <Button>Delete Recipe</Button>
+                <ModalForm onSubmitForm={handleSubmitForm} />
               </Card.Body>
             </Card>
 
