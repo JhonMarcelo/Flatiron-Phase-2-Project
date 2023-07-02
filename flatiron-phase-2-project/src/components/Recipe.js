@@ -38,9 +38,10 @@ function Recipe() {
                     return <ul>{directions}</ul>;
                   })}
                 </Card.Text>
+                <Button>Delete Recipe</Button>
               </Card.Body>
             </Card>
-            <Button>Delete Recipe</Button>
+
             <br />
           </>
         );

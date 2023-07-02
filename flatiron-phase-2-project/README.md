@@ -1,19 +1,28 @@
 <<<<<<< HEAD
+
 # Flatiron-Phase-2-Project
 
 ## FLatiron Phase 2 Project Backend Server
-https://github.com/JhonMarcelo/Flatiron-Project-2-json-server
-=======
+
+# https://github.com/JhonMarcelo/Flatiron-Project-2-json-server
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## FLatiron Phase 2 Project Backend Server
+
+https://github.com/JhonMarcelo/Flatiron-Project-2-json-server
+
+## Install React Bootstrap
+
+```
+npm install react-bootstrap bootstrap
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
-
-## FLatiron Phase 2 Project Backend Server
-https://github.com/JhonMarcelo/Flatiron-Project-2-json-server
 
 ### `npm start`
 
@@ -77,4 +86,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> f6ede35 (Post works)
+
+> > > > > > > f6ede35 (Post works)
